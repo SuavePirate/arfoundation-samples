@@ -121,7 +121,8 @@ public class VoicifyAssistant : MonoBehaviour
 				Debug.Log(voicifyResponse.outputSpeech);
 				if(!string.IsNullOrEmpty(voicifyResponse.outputSpeech))
 				{
-					DialogText.text = voicifyResponse.outputSpeech;
+					if(DialogText != null)
+						DialogText.text = voicifyResponse.outputSpeech;
 					await Say(voicifyResponse.ssml);
 
 				}

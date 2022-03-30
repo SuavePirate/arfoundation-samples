@@ -16,7 +16,7 @@ public class VoskResultText : MonoBehaviour
         Debug.Log(obj);
         var result = new RecognitionResult(obj);
       
-        if(result.Phrases.Length > 0)
+        if(result.Phrases.Length > 0 && ResultText != null)
     	    ResultText.text = result.Phrases[0].Text;
     }
 }
